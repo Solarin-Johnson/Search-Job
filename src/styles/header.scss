@@ -1,0 +1,44 @@
+@use 'variables' as vars;
+
+.header{
+    display: grid;
+    align-content: center;
+    grid-template-rows: 50px;
+    grid-template-columns: 50px 1fr 140px;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: start;
+    .logo{
+        margin-left: 7px;
+    }
+
+    .menu, .sign{
+        font-size: vars.$small_font;
+        display: grid;
+        grid-template-rows: 1fr;
+        color: vars.$dull_color;
+        font-family: vars.$font_family;
+    }
+    .menu{
+        text-align: start;
+        grid-template-rows: 1fr;
+    }
+    .menu div, .sign div{
+        cursor: pointer;
+        display: grid;
+        justify-self: left;
+    }
+    
+    .sign{
+        grid-template-columns: repeat(1, 1fr);
+        font-weight: bold;
+        justify-content: end;
+        text-align: right;
+        margin-right: 20px;
+    }
+    
+    .logo{
+        width: 40px;
+    }
+
+}

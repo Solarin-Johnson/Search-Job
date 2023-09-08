@@ -1,0 +1,36 @@
+@use 'variables' as vars;
+
+#body{
+    display: grid;
+    // grid-template-rows: ;
+    margin: 10px 15px;
+    grid-template-rows: 300px 50px 1fr;
+    grid-gap: 0px;
+
+    #home{
+        color: darken(vars.$s_color, 8%);
+        font-family: vars.$font_family;
+        display: grid;
+        grid-template-rows: 300px;
+        grid-template-columns: 330px;
+
+            #title{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 230px;
+                    #head{
+                        font-size: vars.$big_font;
+                        line-height: 70px;
+                        font-weight: bolder;
+
+                    }
+                    #sub{
+                        font-size: vars.$small_font;
+                        line-height: 20px;
+                        color: vars.$dull_color;
+                }
+            }
+            
+    }
+
+}

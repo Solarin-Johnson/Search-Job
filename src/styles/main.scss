@@ -1,0 +1,14 @@
+
+.container {
+    background-color: #fff;
+    height: 100vh;
+    min-height: 630px;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    
+}
+
+
+ 

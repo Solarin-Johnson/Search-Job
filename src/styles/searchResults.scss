@@ -1,0 +1,32 @@
+@use 'variables' as vars;
+
+#search_results_input{
+    width: 330px;
+    display: grid;
+    border: 3px solid vars.$s_color;
+    align-items: center;
+    border-radius: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+
+
+#search_results_input input {
+    display: grid;
+    margin-left: 7px;
+    grid-template-rows: 30px;
+    grid-template-columns: 1fr;
+    font-size: vars.$small_font;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: vars.$font_family;
+    color: vars.$s_color;
+}
+

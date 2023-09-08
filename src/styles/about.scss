@@ -1,0 +1,13 @@
+@use 'variables' as vars;
+
+#about{
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    grid-template-columns: repeat(3, 20px);
+    grid-gap: 30px;
+    i{
+        cursor: pointer;
+        color: darken(vars.$dull_color, 5%);
+    }
+}

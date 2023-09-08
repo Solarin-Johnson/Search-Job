@@ -1,0 +1,48 @@
+@use 'variables' as vars;
+
+#search_container{
+    width: 330px;
+    display: grid;
+    border: 3px solid vars.$s_color;
+    align-items: center;
+    border-radius: 10px;
+    grid-template-columns: 1fr 0px 80px;
+    grid-template-rows: 40px;
+    align-content: center;
+}
+
+hr {
+    width: 0px;
+    height: 30px;
+    border: 0.1px solid vars.$s_color;
+}
+
+#search_input {
+    display: grid;
+    grid-template-rows: 30px;
+    grid-template-columns: 1fr;
+    font-size: 20px;
+    justify-content: center;
+    margin-left: 7px;
+}
+
+#search_input input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: vars.$font_family;
+    color: vars.$s_color;
+}
+
+.button {
+    display: grid;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+    color: vars.$s_color;
+}
+
+.button.clicked{
+    color: #dddd;
+}
