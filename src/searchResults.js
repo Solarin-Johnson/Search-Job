@@ -66,7 +66,7 @@ function SearchResults(props) {
     }
     useEffect(() => {
         setTimeout(() => {
-            setWaitText('No Jobs found')
+            setWaitText('No Jobs found, Check your query or Internet Connection')
         }, 10000);
         fetchResults()
     }, []); // The empty dependency array means this effect runs once on component mount
