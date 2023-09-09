@@ -48,6 +48,11 @@
     color: #dddd;
 }
 
+#noSearch{
+    display: grid;
+    grid-template-rows: 50px 50px;
+}
+
 .searchAll{
     display: grid;
     max-width: 330px;
@@ -58,7 +63,7 @@
     align-items: center;
     background-color: vars.$s_color;
     color: #fff;
-
+    height: 50px;
 }
 
 #or{
