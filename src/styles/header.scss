@@ -28,6 +28,9 @@
         display: grid;
         justify-self: left;
     }
+    .menuItems{
+        min-width: 60px;
+    }
     
     .sign{
         grid-template-columns: repeat(1, 1fr);

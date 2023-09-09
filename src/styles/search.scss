@@ -1,7 +1,7 @@
 @use 'variables' as vars;
 
 #search_container{
-    width: 330px;
+    max-width: 330px;
     display: grid;
     border: 3px solid vars.$s_color;
     align-items: center;
@@ -9,13 +9,14 @@
     grid-template-columns: 1fr 0px 80px;
     grid-template-rows: 40px;
     align-content: center;
+    
+    hr {
+        width: 0px;
+        height: 30px;
+        border: 0.1px solid vars.$s_color;
+    }
 }
 
-hr {
-    width: 0px;
-    height: 30px;
-    border: 0.1px solid vars.$s_color;
-}
 
 #search_input {
     display: grid;
@@ -45,4 +46,44 @@ hr {
 
 .button.clicked{
     color: #dddd;
+}
+
+.searchAll{
+    display: grid;
+    max-width: 330px;
+    border-radius: 10px;
+    background-color: #fff;
+    justify-content: center;
+    font-family: vars.$font_family;
+    align-items: center;
+    background-color: vars.$s_color;
+    color: #fff;
+
+}
+
+#or{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    align-content: center;
+    max-width: 330px;
+    font-family: vars.$font_family;
+    div{
+        z-index: 1;
+        position: absolute;
+        justify-self: center;
+        align-self: center;
+        background-color: #fff !important;
+        width: 50px;
+        text-align: center;
+    }
+    hr{
+        position: relative;
+        width: 100%;
+        align-self: center;
+        justify-content: center;
+        height: 00px;
+        border: 0.1px solid vars.$s_color;
+        border-color: vars.$s_color;
+    }
 }
