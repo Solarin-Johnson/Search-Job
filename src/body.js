@@ -5,7 +5,7 @@ import Search from './search'
 import SearchResults from './searchResults'
 import About from './About'
 import Home from './Home'
-
+import AllResults from './AllResults';
 
 function Body() {
     // const searchq = document.getElementById('search_news')
@@ -27,7 +27,7 @@ function Body() {
             {search ? (
                 <SearchResults search={searched} />
             ) : (_searchAll ? (
-                <SearchResults search={searched} />
+                <AllResults />
             ) : (
                 <div id="body">
                     <Home />
