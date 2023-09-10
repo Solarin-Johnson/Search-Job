@@ -6,3 +6,8 @@
     min-width: none;
     margin: 0 15px ;
 }
+
+#indicator{
+    display: grid;
+    grid-template-columns: 1fr;
+}

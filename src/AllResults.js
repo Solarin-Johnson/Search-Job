@@ -8,6 +8,7 @@ function AllResults() {
     const [waitText, setWaitText] = useState('Please wait')
     const [page, setPage] = useState(1)
 
+
     function fetchResults(x) {
         // Replace this URL with your actual API endpoint
         const apiUrl = `https://seniorintern-1-a9749386.deta.app/jobs?page=${x}`;
@@ -22,7 +23,7 @@ function AllResults() {
             .then((data) => {
                 // Update the state with the fetched data
                 setJobs(data.data);
-                console.log(data.data)
+                console.log(jobs)
 
             })
             .catch((error) => {
@@ -30,25 +31,52 @@ function AllResults() {
             });
     }
     useEffect(() => {
+        waiter()
         fetchResults(page)
-        setTimeout(() => {
-            setWaitText('No Jobs found, Check your query or Internet Connection')
-        }, 10000);
     }, [])
-        ; // The empty dependency array means this effect runs once on component mount
+
+    function waiter() {
+        setTimeout(() => {
+            setWaitText('There was an Error Fetching Results, Please Check your Internet Connection')
+        }, 10000);
+    }
+
+    const nextPage = () => {
+        if (page < 150) {
+            setJobs([])
+            setPage(page + 1);
+            fetchResults(page)
+            setWaitText('Please Wait')
+            waiter()
+        }
+    };
+
+    const prevPage = () => {
+        if (page > 1) {
+            setPage(page - 1);
+            fetchResults(page)
+            setWaitText('Please Wait')
+            waiter()
+        }
+    };
     return (
         <div id="allResults">
 
             {jobs.length > 0 ? (
                 <>
                     <ReturnAllResults jobs={jobs} />
-                    <div id='pagination'>
-                        <div className={`buttton ${currentPage === 1 ? 'disabled' : 'active'}`}
+                    <div className='pagination'>
+                        <div className={`pagination-item ${page === 1 ? 'disabled' : 'active'}`}
                             onClick={prevPage}>
-
+                            Previous
                         </div>
-                        <div></div>
-                        <div></div>
+                        <div id='indicator'>
+                            Page {page} of 150
+                        </div>
+                        <div className={`pagination-item ${page === 150 ? 'disabled' : 'active'}`}
+                            onClick={nextPage}>
+                            Next
+                        </div>
                     </div>
                 </>
             ) : (
