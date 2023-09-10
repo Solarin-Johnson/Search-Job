@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './styles/search.scss'
 function SearchAll({ searchAll }) {
     const [isClicked, setIsClicked] = useState(false)
     const handleClick = () => {

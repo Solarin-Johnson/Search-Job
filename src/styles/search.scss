@@ -51,20 +51,24 @@
 #noSearch{
     display: grid;
     grid-template-rows: 50px 50px;
+    grid-gap: auto;
+    
 }
 
 .searchAll{
+    cursor: pointer;
     display: grid;
     max-width: 330px;
     border-radius: 10px;
     background-color: #fff;
     justify-content: center;
     font-family: vars.$font_family;
-    align-items: center;
+    align-content: center;
     background-color: vars.$s_color;
     color: #fff;
     height: 50px;
 }
+
 
 #or{
     display: grid;

@@ -11,7 +11,7 @@ function Body() {
     // const searchq = document.getElementById('search_news')
     const [search, setSearch] = useState(false)
     const [searched, setSearched] = useState('')
-    const [_searchAll, setSearchAll] = useState('')
+    const [_searchAll, setSearchAll] = useState(false)
     const searchedValue = (data) => {
         setSearch(true)
         console.log(data)
@@ -21,10 +21,12 @@ function Body() {
         setSearchAll(true)
         console.log(data)
     }
-    
+
     return (
         <>
             {search ? (
+                <SearchResults search={searched} />
+            ) : (_searchAll ? (
                 <SearchResults search={searched} />
             ) : (
                 <div id="body">
@@ -33,6 +35,7 @@ function Body() {
                     <SearchAll searchAll={searchAll} />
                     <About />
                 </div>
+            )
             )}
 
         </>
