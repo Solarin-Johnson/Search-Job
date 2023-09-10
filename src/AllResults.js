@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
-import './styles/searchResults.scss';
-import _AllResults from './_AllResults';
+import './styles/result.scss';
+import './styles/ReturnAllResults.scss';
+import ReturnAllResults from './ReturnAllResults';
 
 function AllResults() {
     const [jobs, setJobs] = useState([])
     const [waitText, setWaitText] = useState('Please wait')
+    const [page, setPage] = useState(1)
 
     function fetchResults(x) {
         // Replace this URL with your actual API endpoint
@@ -19,8 +21,8 @@ function AllResults() {
             })
             .then((data) => {
                 // Update the state with the fetched data
-                setJobs(data);
-                console.log(jobs)
+                setJobs(data.data);
+                console.log(data.data)
 
             })
             .catch((error) => {
@@ -28,22 +30,31 @@ function AllResults() {
             });
     }
     useEffect(() => {
+        fetchResults(page)
         setTimeout(() => {
             setWaitText('No Jobs found, Check your query or Internet Connection')
         }, 10000);
-        for (var i = 1; i < 2; i++) {
-            fetchResults(i)
-        }
     }, [])
         ; // The empty dependency array means this effect runs once on component mount
     return (
-        <>
+        <div id="allResults">
+
             {jobs.length > 0 ? (
-                <_AllResults jobs={jobs} />
+                <>
+                    <ReturnAllResults jobs={jobs} />
+                    <div id='pagination'>
+                        <div className={`buttton ${currentPage === 1 ? 'disabled' : 'active'}`}
+                            onClick={prevPage}>
+
+                        </div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </>
             ) : (
                 <p>{waitText}</p>
             )}
-        </>
+        </div>
     )
 }
 

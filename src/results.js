@@ -65,7 +65,7 @@ const Results = ({ jobs }) => {
                             className={`pagination-items ${currentPage === totalPaginationButtons - 1 - index ? 'active' : ''}`}
                             onClick={() => paginate(totalPaginationButtons)}
                         >
-                            {totalPaginationButtons + 1}
+                            {totalPaginationButtons - 1}
                         </div>
                     ))}
                 </div>

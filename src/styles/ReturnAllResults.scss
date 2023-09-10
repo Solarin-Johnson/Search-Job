@@ -1,0 +1,8 @@
+#allResults{
+    grid-template-rows: 1fr 50px;
+    grid-template-columns: 1fr;
+    display: grid;
+    grid-gap: 20px;
+    min-width: none;
+    margin: 0 15px ;
+}
