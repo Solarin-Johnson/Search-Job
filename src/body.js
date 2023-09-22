@@ -14,12 +14,10 @@ function Body() {
     const [_searchAll, setSearchAll] = useState(false)
     const searchedValue = (data) => {
         setSearch(true)
-        console.log(data)
         setSearched(data)
     }
     const searchAll = (data) => {
         setSearchAll(true)
-        console.log(data)
     }
 
     return (

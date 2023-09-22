@@ -29,7 +29,6 @@ function SearchResults(props) {
         } else {
             searchq = removeWhitespace(document.getElementById('search_news').value)
             sessionStorage.setItem('search_news', searchq)
-            console.log(searchq)
             sessionStorage.setItem('searchq', searchq)
             fetchResults()
             // window.location.assign("news/news.html")
@@ -45,7 +44,7 @@ function SearchResults(props) {
 
     function fetchResults() {
         // Replace this URL with your actual API endpoint
-        const apiUrl = `https://seniorintern-1-a9749386.deta.app/job/search/${searchInput}`;
+        const apiUrl = `${process.env.REACT_APP_API_URL}${searchInput}`;
 
         fetch(apiUrl)
             .then((response) => {
@@ -57,7 +56,6 @@ function SearchResults(props) {
             .then((data) => {
                 // Update the state with the fetched data
                 setJobs(data);
-                console.log(jobs)
 
             })
             .catch((error) => {

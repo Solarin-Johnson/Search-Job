@@ -11,7 +11,7 @@ function AllResults() {
 
     function fetchResults(x) {
         // Replace this URL with your actual API endpoint
-        const apiUrl = `https://seniorintern-1-a9749386.deta.app/jobs?page=${x}`;
+        const apiUrl = `${process.env.REACT_APP_API_URL_ALL}=${x}`;
 
         fetch(apiUrl)
             .then((response) => {
@@ -23,7 +23,6 @@ function AllResults() {
             .then((data) => {
                 // Update the state with the fetched data
                 setJobs(data.data);
-                console.log(jobs)
 
             })
             .catch((error) => {

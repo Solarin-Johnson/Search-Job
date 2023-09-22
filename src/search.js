@@ -20,7 +20,6 @@ function Search({ searchStatus }) {
         } else {
             searchq = removeWhitespace(document.getElementById('search_news').value)
             sessionStorage.setItem('search_news', searchq)
-            console.log(searchq)
             sessionStorage.setItem('searchq', searchq)
             searchStatus(searchq)
 

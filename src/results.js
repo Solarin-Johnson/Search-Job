@@ -2,7 +2,6 @@ import './styles/result.scss'
 import { useState } from 'react'
 import Component from './components'
 const Results = ({ jobs }) => {
-    console.log(jobs)
     const [currentPage, setCurrentPage] = useState(1);
     const [jobsPerPage] = useState(12);
 

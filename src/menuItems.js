@@ -1,11 +1,10 @@
 import React from "react";
 
 function MenuItems({ items }) {
-    console.log(items.length)
     const grid = {
         gridTemplateColumns: `repeat(${items.length}, 1fr)`,
     }
-    const home = ()=> {
+    const home = () => {
         window.location.reload()
     }
     return (
