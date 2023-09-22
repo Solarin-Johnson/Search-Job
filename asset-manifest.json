@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Search-Job/static/css/main.9f290648.css",
-    "main.js": "/Search-Job/static/js/main.7d021681.js",
+    "main.js": "/Search-Job/static/js/main.ec8e7b7f.js",
     "static/js/787.3597ee71.chunk.js": "/Search-Job/static/js/787.3597ee71.chunk.js",
     "static/media/logo.png": "/Search-Job/static/media/logo.3026334242229dab5bac.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/Search-Job/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -11,11 +11,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/Search-Job/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/Search-Job/index.html",
     "main.9f290648.css.map": "/Search-Job/static/css/main.9f290648.css.map",
-    "main.7d021681.js.map": "/Search-Job/static/js/main.7d021681.js.map",
+    "main.ec8e7b7f.js.map": "/Search-Job/static/js/main.ec8e7b7f.js.map",
     "787.3597ee71.chunk.js.map": "/Search-Job/static/js/787.3597ee71.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f290648.css",
-    "static/js/main.7d021681.js"
+    "static/js/main.ec8e7b7f.js"
   ]
 }
